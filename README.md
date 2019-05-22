@@ -1,9 +1,8 @@
-# Create JIRA epic with tasks/subtaks
+# Create a JIRA epic with tasks/subtaks
 
-A script to build JIRA tasks using postman collections and Newman.
+A script that builds JIRA tasks using postman collections and Newman. 
 
-<img src="source/images/postman.png" display="inline-block" width="100px" height="auto">
-<img src="source/images/jira.png" display="inline-block" width="100px" height="auto">
+<img src="https://i.imgur.com/z0s4jc8.jpg" display="inline-block" width="310px" height="auto">
 
 ## Note about passwords
 
@@ -47,7 +46,7 @@ This should remove this specific file from the git index, so even when the file 
 
 You can ignore most of what's in here. Click on one of the batch files to run the script.
 
-![folder](source/images/folders.png)
+<img src="https://i.imgur.com/ZtYP9ah.png">
 
 - Reports are saved to `newman`. You can delete these files if not needed. The script will create a new folder if not there.
 
@@ -79,7 +78,7 @@ The batch file opens a cmd shell. Enter the details as prompted.
 
 After the program runs, you'll get a confirmation message and a status report opens in your browser.
 
-![report](source/images/report.png)
+<img src="https://i.imgur.com/a2mGUj5.png">
 
 Click the first green bar at the top of the page to expand it. In the reponse body you'll see the epic JIRA number. All JIRA tasks are nested under that. If there are errors, the bar(s) appear red. Expand the bar to see the error code and use Google to search for JIRA error code values.
 
