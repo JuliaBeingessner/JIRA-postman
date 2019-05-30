@@ -4,29 +4,16 @@ A script that builds JIRA tasks using postman collections and Newman.
 
 <img src="https://i.imgur.com/z0s4jc8.jpg" display="inline-block" width="310px" height="auto">
 
-## Note about passwords
-
-When you run the batch file, you are prompted to enter `password` and `username`. Your credentials are stored in the local copy of the `MS_env.json` file. Git ignores changes to this file, but you should still be careful with which files you share. If after you run the script and you have uncommitted changes, it's going to be this file: `MS_env.json`.
-
-Before you run the script to build JIRA tasks for the first time, run this:
-
-```bash
-git update-index --assume-unchanged source/globals/MS_env.json
-```
-
-This should remove this specific file from the git index, so even when the file changes, git won't ask you to push.
-
 ## Installation
 
 1. Clone the repository.
-- in Git Bash:
+    In Git Extension: Click Start, and select Clone repository...	 
+    In Git Bash:
 
     ```bash
     c/git
     $ git clone https://github.com/JuliaBeingessner/JIRA-postman
     ```
-	
-- in Git Extension: Click Start, select Clone repository...	
 
 1. Install `npm` (if you don't already have it).
 
@@ -38,7 +25,11 @@ This should remove this specific file from the git index, so even when the file 
 
 1. Install dependencies.
 
-    From the root folder (c/git/JIRA-postman), run the following command to install the dependencies:
+    Go to the root folder:
+	
+	```cd C:/Git/JIRA-postman) ``` 
+	
+	Run the following command to install the dependencies:
 
     ```bash
     c/git/JIRA-postman
@@ -47,11 +38,23 @@ This should remove this specific file from the git index, so even when the file 
 
 ### Folder structure
 
-You can ignore most of what's in here. Click on one of the batch files to run the script.
+You should ignore most of what's in here. Click on one of the batch files to run the script.
 
 <img src="https://i.imgur.com/ZtYP9ah.png">
 
 - Reports are saved to `newman`. You can delete these files if not needed. The script will create a new folder if not there.
+
+## Note about passwords
+
+When you run the batch file, you are prompted to enter your OKTA `password` and `username`. Your credentials are stored in the local copy of the `MS_env.json` file. Git ignores changes to this file, but you should still be careful with which files you share. If after you run the script and you have uncommitted changes, it's going to be this file: `MS_env.json`.
+
+Before you run the script to build JIRA tasks for the first time, run this:
+
+```bash
+git update-index --assume-unchanged source/globals/MS_env.json
+```
+
+This should remove this specific file from the git index, so even when the file changes, git won't ask you to push.
 
 ## Usage
 
@@ -97,3 +100,4 @@ Reports are saved to the `Newman` folder. The newman folder is in the gitignore 
 
 ### Changing the script text
 If you want to change the wording in the auto-generated tasks: don't. Ping Julia. 
+<img src="https://imgur.com/a/buhppju">
