@@ -8,7 +8,7 @@ A script that builds JIRA tasks using postman collections and Newman.
 
 When you run the batch file, you are prompted to enter `password` and `username`. Your credentials are stored in the local copy of the `MS_env.json` file. Git ignores changes to this file, but you should still be careful with which files you share. If after you run the script and you have uncommitted changes, it's going to be this file: `MS_env.json`.
 
-Before you run the script for the first time, run this:
+Before you run the script to build JIRA tasks for the first time, run this:
 
 ```bash
 git update-index --assume-unchanged source/globals/MS_env.json
@@ -19,15 +19,18 @@ This should remove this specific file from the git index, so even when the file 
 ## Installation
 
 1. Clone the repository.
+- in Git Bash:
 
     ```bash
     c/git
-    $ git clone https://github.com/kyleweishaar/JIRA-postman
+    $ git clone https://github.com/JuliaBeingessner/JIRA-postman
     ```
+	
+- in Git Extension: Click Start, select Clone repository...	
 
 1. Install `npm` (if you don't already have it).
 
-    Download [here](https://www.npmjs.com/get-npm).
+    [Download](https://www.npmjs.com/get-npm)
     
     When setting up the installer, make sure that npm/node are added to your PATH.
     
@@ -62,11 +65,11 @@ To run the script, double-click the batch file:
 
 The batch file opens a cmd shell. Enter the details as prompted.
 
-- trigram = Qlik trigram
+- trigram = your Qlik trigram
 
 - password = JIRA password (usually the same as your Qlik login password)
 
-- JIRA label = product_MS_Checks
+- JIRA label = HLP_QualityCheck
 
 - epic title = product MS Checks
 
@@ -92,3 +95,5 @@ Reports are saved to the `Newman` folder. The newman folder is in the gitignore 
 |401|Unauthorized|Try the script again. Make sure to use your trigram `ABC` or `abc` and the password that you use to log into JIRA `password123`.|
 |403|Forbidden|Unable to create tasks. Not necessarily an authentication issue, but the script can't access the JIRA API. Try clearing the browser cache, logging in/out of JIRA, and restarting your machine. Ask someone else to try running the script, if they succeed then it is probably solvable by restarting your computer.|
 
+### Changing the script text
+If you want to change the wording in the auto-generated tasks: don't. Ping Julia. 
