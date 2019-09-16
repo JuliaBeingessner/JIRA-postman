@@ -1,6 +1,6 @@
 # Create a JIRA epic with tasks/subtaks
 
-A script that builds JIRA tasks using postman collections and Newman. 
+A script that builds JIRA tasks using postman collections and Newman. Updated: September 16, 2019
 
 <img src="https://i.imgur.com/z0s4jc8.jpg" display="inline-block" width="310px" height="auto">
 
@@ -8,6 +8,7 @@ A script that builds JIRA tasks using postman collections and Newman.
 
 1. Clone the repository.
     In Git Extension: Click Start, and select Clone repository...	 
+	
     In Git Bash:
 
     ```bash
@@ -100,4 +101,5 @@ Reports are saved to the `Newman` folder. The newman folder is in the gitignore 
 
 ### Changing the script text
 If you want to change the wording in the auto-generated tasks: don't. Ping Julia. 
+
 <img src="https://i.imgur.com/wK84XJB.jpg">
